@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapex_bp_calculator_website=self.webpackChunkapex_bp_calculator_website||[]).push([[228],{3769:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
