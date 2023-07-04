@@ -1,0 +1,6 @@
+{
+  "mdx.experimentalLanguageServer": true,
+  "markdownlint.config": {
+    "MD024": false
+  }
+}

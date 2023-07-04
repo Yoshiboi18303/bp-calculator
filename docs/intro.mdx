@@ -1,0 +1,135 @@
+---
+sidebar_position: 1
+sidebar_label: Introduction
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+
+# Apex Battle Pass Calculator
+
+A small, simple package for quick calculations for the Apex Battle Pass system.
+
+## Installation
+
+### As CLI (recommended)
+
+<Tabs
+  values={[
+    {
+      label: "npm",
+      value: "npm",
+    },
+    {
+      label: "yarn",
+      value: "yarn",
+    },
+    {
+      label: "pnpm",
+      value: "pnpm",
+    },
+  ]}
+  groupId="package-managers"
+>
+  <TabItem value="npm">
+    <CodeBlock language="bash">
+      npm install -g @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="yarn">
+    <CodeBlock language="bash">
+      yarn global add @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+    <i>(This may not work, contribution is appreciated!)</i>
+  </TabItem>
+  <TabItem value="pnpm">
+    <CodeBlock language="bash">
+      pnpm add -g @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+  </TabItem>
+</Tabs>
+
+Then run this:
+
+```bash
+abp
+```
+
+> Learn more about how to use the CLI **[here](/docs/cli)**
+>
+> **OR**
+>
+> Learn about what options the CLI supports **[here](/docs/api/options)**
+
+### As npm package
+
+:::caution Note before continuing
+
+I would strongly recommend to use this package as a CLI, rather than use this method. If you're making a project that utilizes this, go ahead and continue.
+
+:::
+
+<Tabs
+  values={[
+    {
+      label: "npm",
+      value: "npm",
+    },
+    {
+      label: "yarn",
+      value: "yarn",
+    },
+    {
+      label: "pnpm",
+      value: "pnpm",
+    },
+  ]}
+  groupId="package-managers"
+>
+  <TabItem value="npm">
+    <CodeBlock language="bash">
+      npm install @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="yarn">
+    <CodeBlock language="bash">
+      yarn add @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="pnpm">
+    <CodeBlock language="bash">
+      pnpm add @yoshiboi18303/apex-bp-calculator
+    </CodeBlock>
+  </TabItem>
+</Tabs>
+
+Afterwards, open your project with your favorite editor and put this into a JavaScript file:
+
+```javascript title="index.js"
+const bpCalculator = require("@yoshiboi18303/apex-bp-calculator");
+
+console.log(bpCalculator.calculate(1, 10, 0)); // => 90
+```
+
+If you'd like to use TypeScript rather than JavaScript, the Apex Battle Pass Calculator has TypeScript support. Open a TypeScript file, then put this in there:
+
+```typescript title="index.ts"
+import calculate from "@yoshiboi18303/apex-bp-calculator";
+
+console.log(calculate(1, 10, 0)); // => 90
+```
+
+:::info About TypeScript
+
+Why does the TypeScript file not use `bpCalculator.calculate` like the JavaScript file does?
+
+This TypeScript file is importing `calculate` which is a `default` import, TypeScript when used with this specific import syntax, will look for a default import in the `main` file.
+
+In this case, the `calculate` function.
+
+JavaScript does not do this, you'll have to do `bpCalculator.default()` in JavaScript code.
+
+:::
+
+> Learn more about the methods in the package **[here](/docs/api/package)**
